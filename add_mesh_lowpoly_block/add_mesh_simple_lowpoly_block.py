@@ -7,7 +7,9 @@ def add_mesh(self, context):
 
 	#add mesh and create group
 	bpy.ops.mesh.primitive_cube_add(enter_editmode=False, location=(0, 0, 1))
+	#bpy.data.objects["Cube"].name = 'simple_poly'
 	obj = context.object
+	obj.name = 'simple_poly'
 	me = obj.data
 	bpy.ops.object.mode_set(mode='EDIT')
 	mesh = bmesh.from_edit_mesh(obj.data)
@@ -96,16 +98,5 @@ class AddLowPolyBlock(bpy.types.Operator):
 
 		return {'FINISHED'}
 
-		
-'''
-	extra_twist = 1
 
-block = 1
-
-dis = 0.18
-x_dis = 1
-y_dis = 0
-z_dis = 1
-z_modifier = 0.5
-'''
 
