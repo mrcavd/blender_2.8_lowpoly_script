@@ -3,6 +3,10 @@ from bpy.types import Operator
 import random, math
 from bpy.props import (IntProperty, BoolProperty, FloatProperty)
 
+default_X = True
+default_Y = False
+default_Z = False
+
 
 def add_mesh(dis, x, y, z, i, context):
 
@@ -80,17 +84,17 @@ class AddLowPolyBlock(Operator):
 	x: BoolProperty(
 		name = "Enable X Axis Lowpoly Effect",
 		description = "Enable vertex dispalcement in X axis",
-		default = True
+		default = default_X
 		)
 	y: BoolProperty(
 		name = "Enable Y Axis Lowpoly Effect",
 		description = "Enable vertex dispalcement in Y axis",
-		default = False
+		default = default_Y
 		)
 	z: BoolProperty(
 		name = "Enable Z Axis Lowpoly Effect",
 		description = "Enable vertex dispalcement in Z axis",
-		default = False
+		default = default_Z
 		)
 
 	#def draw(self, context):
