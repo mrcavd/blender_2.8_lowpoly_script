@@ -12,7 +12,7 @@ Find Lowpoly Blocks in Add menu
 Create new blocks by either right clicking on a existing block or hard coding number_of_blocks in either script to create multiple blocks along Y-axis
 
 ### Simple Lowpoly Orthographic  
-![demo_1](https://imgur.com/XIU69Y0.png)  
+![demo_1](https://imgur.com/PrjxHmw.png)  
   
 ### Simple Lowpoly Perspective    
 ![demo_2](https://imgur.com/Qif9S1d.png)  
