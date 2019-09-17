@@ -16,20 +16,20 @@ def add_mesh(dis, extra_twist, i, context):
 	bpy.ops.object.mode_set(mode='EDIT')
 	bpy.ops.mesh.subdivide()
 	bpy.ops.mesh.select_all(action = 'DESELECT')
-        
+
 	bpy.ops.object.mode_set(mode='OBJECT')
-        
+
 	for i in range(20,26):
 		me.vertices[i].select = True
 		
 	bpy.ops.object.mode_set(mode='EDIT')
 	bpy.ops.object.vertex_group_assign()
-        
+
 	#subdide again primed for lowpoly effect
 	bpy.ops.mesh.select_all(action='SELECT')
 	bpy.ops.mesh.subdivide()
 	bpy.ops.object.mode_set(mode='OBJECT')
-        
+
 	#decimate and triangulate
 	bpy.ops.object.modifier_add(type='DECIMATE')
 	bpy.context.object.modifiers["Decimate"].ratio = random.uniform(0.25, 0.86)
@@ -45,7 +45,7 @@ def add_mesh(dis, extra_twist, i, context):
 		dis_mod = random.uniform(-dis, dis)
 	bpy.context.object.modifiers["Displace"].strength = dis_mod
 	bpy.ops.object.modifier_apply(apply_as='DATA', modifier="Displace")
-        
+
 	if(extra_twist == 1):
 		bpy.ops.object.modifier_add(type='SIMPLE_DEFORM')
 		deg = random.randrange(-3, 3)
